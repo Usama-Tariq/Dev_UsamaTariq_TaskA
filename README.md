@@ -108,7 +108,7 @@ GET /api/health
 ```json
 {
   "status": "ok",
-  "uptimeSeconds": number,
+  "uptimeSeconds": "number",
   "timestamp": "string",
   "env": "string"
 }
