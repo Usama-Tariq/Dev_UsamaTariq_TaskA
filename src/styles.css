@@ -1,0 +1,205 @@
+:root {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  color: #111827;
+  background-color: #f3f4f6;
+}
+
+body {
+  margin: 0;
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 3rem;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 1.9rem;
+}
+
+.subtitle {
+  margin-top: 0.5rem;
+  color: #6b7280;
+  font-size: 0.95rem;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.card {
+  background: #ffffff;
+  border-radius: 0.75rem;
+  padding: 1.25rem 1.5rem;
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.05);
+}
+
+.card h2 {
+  margin: 0 0 0.5rem;
+  font-size: 1.2rem;
+}
+
+.card h3 {
+  margin: 0.25rem 0 0.25rem;
+  font-size: 1.05rem;
+}
+
+.card p {
+  margin: 0.25rem 0;
+  font-size: 0.95rem;
+  color: #4b5563;
+}
+
+.card button {
+  margin-top: 0.75rem;
+  padding: 0.6rem 1rem;
+  border-radius: 0.5rem;
+  border: none;
+  background: #111827;
+  color: #ffffff;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.card button:disabled {
+  opacity: 0.7;
+  cursor: default;
+}
+
+.alert {
+  margin-top: 0.75rem;
+  padding: 0.75rem 0.9rem;
+  border-radius: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.alert-error {
+  background: #fef2f2;
+  color: #b91c1c;
+  border: 1px solid #fecaca;
+}
+
+.alert-info {
+  background: #eff6ff;
+  color: #1d4ed8;
+  border: 1px solid #bfdbfe;
+}
+
+.health-result {
+  margin-top: 0.75rem;
+  padding-top: 0.5rem;
+  border-top: 1px solid #e5e7eb;
+  font-size: 0.9rem;
+  color: #374151;
+}
+
+.health-result p {
+  margin: 0.15rem 0;
+}
+
+.search-form {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.search-form input {
+  flex: 1;
+  padding: 0.6rem 0.75rem;
+  border-radius: 0.5rem;
+  border: 1px solid #d1d5db;
+  font-size: 0.95rem;
+}
+
+.search-form button {
+  padding: 0.6rem 1rem;
+  border-radius: 0.5rem;
+  border: none;
+  background: #111827;
+  color: #ffffff;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.search-form button:disabled {
+  opacity: 0.7;
+  cursor: default;
+}
+
+.loading {
+  font-size: 0.95rem;
+  color: #6b7280;
+}
+
+.results-section {
+  margin-top: 0.75rem;
+}
+
+.results-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 0.75rem;
+}
+
+.result-card {
+  padding: 0.9rem 1rem;
+  border-radius: 0.75rem;
+  border: 1px solid #e5e7eb;
+  background: #f9fafb;
+}
+
+.result-card h4 {
+  margin: 0 0 0.25rem;
+  font-size: 1rem;
+}
+
+.result-card p {
+  margin: 0.25rem 0 0.5rem;
+  font-size: 0.93rem;
+  color: #4b5563;
+}
+
+.result-id {
+  font-size: 0.8rem;
+  color: #9ca3af;
+}
+
+.meta {
+  margin-top: 1rem;
+  border-top: 1px solid #e5e7eb;
+  padding-top: 0.75rem;
+  font-size: 0.9rem;
+}
+
+.summary {
+  margin-bottom: 0.5rem;
+}
+
+.empty-state {
+  margin-top: 1rem;
+  font-size: 0.95rem;
+  color: #6b7280;
+}
+
+.empty-state code {
+  background: #e5e7eb;
+  padding: 0.1rem 0.3rem;
+  border-radius: 0.25rem;
+  font-size: 0.85rem;
+}
