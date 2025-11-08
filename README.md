@@ -47,6 +47,12 @@ npm install
 npm run dev
 ```
 
+or simply
+
+```bash
+npm i && npm run dev
+```
+
 This will start both the frontend (port 5173) and backend (port 4000) in development mode.
 
 ## API Documentation
