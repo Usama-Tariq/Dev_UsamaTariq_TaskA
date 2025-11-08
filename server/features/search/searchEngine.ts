@@ -5,9 +5,11 @@ import faqsJson from "./faqs.json";
 const faqs: Faq[] = faqsJson as Faq[];
 
 /**
- * Score an FAQ based on query:
- *  - +2 if term appears in title
- *  - +1 if term appears in body
+ * Scores an FAQ item based on how well it matches the search query.
+ * Scoring system:
+ * - Title matches: +2 points per matching term
+ * - Body matches: +1 point per matching term
+ * - Case-insensitive matching
  */
 const scoreFaq = (faq: Faq, query: string): number => {
   const normalizedTitle = faq.title.toLowerCase();
@@ -27,12 +29,20 @@ const scoreFaq = (faq: Faq, query: string): number => {
   return score;
 };
 
+/**
+ * Creates a snippet from the FAQ body, truncating if necessary.
+ * Adds an ellipsis (...) if the text is truncated.
+ */
 const createSnippet = (body: string, maxLength = 120): string => {
   if (body.length <= maxLength) return body;
 
   return body.slice(0, maxLength).trimEnd() + "…";
 };
 
+/**
+ * Builds a summary from the ranked FAQ results.
+ * Takes the first sentence from each FAQ and combines them.
+ */
 const buildSummary = (ranked: RankedFaq[]): string | undefined => {
   if (!ranked.length) return undefined;
 
